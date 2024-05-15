@@ -1,0 +1,126 @@
+:root{
+    --primary-color: hsl(179, 62%, 43%);
+    --primary-light-color: hsl(179, 58%, 47%);
+    --secondary-color:hsl(71, 73%, 54%);
+    --text-primary-color:hsl(204, 43%, 93%);
+    --text-secondary-color:hsl(218, 22%, 67%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Karla", sans-serif;
+    background-color: var(--text-primary-color);
+}
+
+.main-container{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.pricing-grid{
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 5px 10px rgba(32, 32, 32, 0.278);
+}
+
+article{
+    padding: 1rem 2rem;
+    margin: 0;
+}
+
+.pricing-info{
+    background-color: #FFFFFF;
+}
+
+.title-primary{
+    color: var(--primary-color);
+}
+.title-secondary{
+    color: var(--secondary-color);
+}
+.description{
+    color: var(--text-secondary-color);
+    line-height: 1.9;
+}
+
+
+.pricing-plan{
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+}
+
+.plan-title{
+    font-size: 1.3rem;
+}
+
+.plan-price{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.price-period{
+    opacity: .8;
+}
+
+.sign-up-button{
+    display: block;
+    color: var(--text-primary-color);
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 65px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px rgba(32, 32, 32, 0.278);
+}
+
+
+.features-list{
+    background-color: var(--primary-light-color);
+    color: var(--text-primary-color);
+}
+
+.features-title{
+    font-size: 1.3rem;
+}
+
+.features{
+    padding: 0;
+    list-style: none;
+}
+
+.feature-item{
+    opacity: .8;
+    line-height: 1.7;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 768px) {
+    .pricing-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-info{
+        grid-column: 1 / 3;
+    }
+}
